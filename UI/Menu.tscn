@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/CAT_Constantia.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
-[sub_resource type="Shader" id=4]
+[sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
 uniform vec4 BackColor : hint_color = vec4(0.0, 0.4, 0.58, 1.0);
@@ -78,21 +78,21 @@ void fragment() {
 }
 "
 
-[sub_resource type="ShaderMaterial" id=5]
-shader = SubResource( 4 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 shader_param/BackColor = Color( 0, 0.4, 0.58, 1 )
 shader_param/CloudColor = Color( 0.18, 0.7, 0.87, 1 )
 shader_param/speed = 2.0
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 36
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 22
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 22
 font_data = ExtResource( 2 )
 
@@ -105,7 +105,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-material = SubResource( 5 )
+material = SubResource( 2 )
 scale = Vector2( 4.5, 8 )
 texture = ExtResource( 3 )
 centered = false
@@ -123,7 +123,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 margin_right = 576.0
 margin_bottom = 512.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Welcome to Match-3"
 align = 1
 valign = 1
@@ -136,7 +136,7 @@ margin_left = 238.0
 margin_top = 512.0
 margin_right = 338.0
 margin_bottom = 552.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -147,7 +147,7 @@ margin_left = 238.0
 margin_top = 562.0
 margin_right = 338.0
 margin_bottom = 602.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "Quit"
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
