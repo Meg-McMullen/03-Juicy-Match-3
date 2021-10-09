@@ -1,5 +1,7 @@
 # 03-Juicy-Match-3
-Project 03 for MSCH-C220, 9 October 2021
+Project 03 for MSCH-C220, 
+9 October 2021
+
 Match-3 game built with music, sound effects, change of the icons, particles when matched, change of typeface, change of colors, shake screen when match, add particle when elements are removed, elements fall off screen when matched, elements rotate when matched, Contains at least two levels (with different game-play mechanics), Score is tracked, Main menu with moving shader, background on both levels, End-game screen
 
 ## Implementation
